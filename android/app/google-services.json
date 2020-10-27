@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "130148878045",
+    "firebase_url": "https://who-s-who-bdf72.firebaseio.com",
+    "project_id": "who-s-who-bdf72",
+    "storage_bucket": "who-s-who-bdf72.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:130148878045:android:ac48350b250f3f3b2efd34",
+        "android_client_info": {
+          "package_name": "com.imen.who_s_who"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "130148878045-usjio071von5o2a1321cmmjoe6q3juhh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAt6YUPllzsor5AoAOKA4mOMZB7_-SmIzo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "130148878045-usjio071von5o2a1321cmmjoe6q3juhh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
