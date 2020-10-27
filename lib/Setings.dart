@@ -74,12 +74,17 @@ class Setting extends StatelessWidget{
 
 }
 
-Sound() {
+Widget Sound() {
+  double _currentSliderValue = 20.0;
+  return Slider(
+      value: _currentSliderValue,
+      min: 0,
+      max: 50,
+      label: 'Volume',
+      onChanged: null,
+  );
 }
 Lgg() {
-  AlertDialog(
-    title: Text('Choose language'),
-  );
 }
 Widget DialogButton(BuildContext context, String text, IconData icon, function) {
   return FlatButton.icon(
