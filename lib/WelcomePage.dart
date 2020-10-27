@@ -1,9 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:who_s_who/AnswerScreen.dart';
 import 'package:who_s_who/Discussion.dart';
 import 'package:who_s_who/MBackground.dart';
 import 'package:who_s_who/Setings.dart';
-import 'package:who_s_who/TestFile.dart';
 import 'package:who_s_who/TopBar.dart';
 
 class WelcomePage extends StatelessWidget{
@@ -58,7 +58,7 @@ class WelcomePage extends StatelessWidget{
 
                 child: Column(
                   children: [
-                    RedirectButton('Create a new game', Icons.create, context, SnackBarDemo()),
+                    RedirectButton('Create a new game', Icons.create, context, AnswerScreen()),
                     RedirectButton('Join existing', Icons.input, context, Discussion()),
                   ],
                 ),

@@ -1,37 +1,45 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:who_s_who/Modules/TextComposer.dart';
+import 'package:who_s_who/TopBar.dart';
 
-class Answers extends StatelessWidget {
+class AnswerScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.deepOrange[50],
+      appBar: TopBar('Your Answer', []),
       body: GestureDetector(
         onTap:() => FocusScope.of(context).unfocus(),
         child: Column(
           children: [
             Expanded(
-              child: Container(
-                width: double.infinity,
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                  border: Border.all(
-                    color: Colors.black,
-                  )
-                ),
+              child: Center(
+                //width: double.infinity,
                 child: Container(
-                  margin: EdgeInsets.only(bottom: 10.0, left: 20.0, right: 20.0),
-                  alignment: Alignment.bottomCenter,
+                  padding: EdgeInsets.only(bottom: 30.0, left: 50.0, right: 50.0, top: 20.0),
+                  decoration: BoxDecoration(
+                      border: Border.all(
+                        color: Colors.black54,
+                        width: 5.0,
+                      ),
+                    color: Colors.orangeAccent,
+                  ),
+                  //alignment: Alignment.bottomCenter,
                   child: Text(
-                    'Question : \n',
+                    'Question :?',
+                    textAlign: TextAlign.start,
                   ),
                 ),
               ),
             ),
-            TextComposer(),
+            TextComposer(()=>{}, sendAnswer()),
           ],
         ),
       ),
     );
   }
+}
+
+sendAnswer() {
 }

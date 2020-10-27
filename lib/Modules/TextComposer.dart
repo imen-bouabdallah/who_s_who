@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-Widget TextComposer() {
+Widget TextComposer(openGalery, function) {
   return Container(
     alignment: Alignment.bottomCenter,
     padding: EdgeInsets.only(bottom: 20.0),
@@ -12,8 +12,8 @@ Widget TextComposer() {
           child: IconButton(
             icon: Icon(Icons.photo),
             onPressed: () {
-              //open galery to send images
-            },
+              openGalery();
+              },
             color: Colors.orange,
           ),
         ),
@@ -32,7 +32,7 @@ Widget TextComposer() {
           child: IconButton(
             icon: Icon(Icons.send),
             onPressed: () {
-              //send msg
+              function();
               print('send');
             },
             color: Colors.orange,

@@ -59,13 +59,16 @@ class _DiscussionPage extends State<Discussion> {
               ),
           ),
 
-            TextComposer(),
+            TextComposer(()=>(){}, sendMsg()),
         ],
         ),
         ),
       );
 
   }
+}
+
+sendMsg() {
 }
 
 class Messages extends StatelessWidget {
