@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:who_s_who/Discussion.dart';
 import 'package:who_s_who/Modules/TextComposer.dart';
 import 'package:who_s_who/TopBar.dart';
 
@@ -33,13 +34,21 @@ class AnswerScreen extends StatelessWidget {
                 ),
               ),
             ),
-            TextComposer(()=>{}, sendAnswer()),
+            TextComposer(()=>{}, (String msg)=>{
+            //TODO send the answer to the DB
+            print("sending data"+ msg),
+            Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => Discussion())),
+            }),
           ],
         ),
       ),
     );
   }
+
+
+
 }
 
-sendAnswer() {
-}
+

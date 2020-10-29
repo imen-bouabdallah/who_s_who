@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:who_s_who/RecoverPass.dart';
@@ -22,6 +23,10 @@ class _LoginPageState extends State<LoginPage> {
           FocusScope.of(context).requestFocus(new FocusNode());
         },
         child: Container(
+          constraints: BoxConstraints(
+            maxHeight: MediaQuery.of(context).size.height,
+            maxWidth: MediaQuery.of(context).size.width,
+          ),
             decoration: BoxDecoration(
               gradient: LinearGradient(
                   begin: Alignment.topRight,
@@ -105,33 +110,39 @@ class _LoginPageState extends State<LoginPage> {
                                 text:'Forgot password?',
                                 style: TextStyle(
                                   color: Colors.blueGrey,
-
+                                  decoration: TextDecoration.underline,
+                                  fontSize: 15,
                                 ),
                                 recognizer: TapGestureRecognizer()
                                   ..onTap = () => FogotPass(context),
                               ),
                             ),
                           ),
-                          SizedBox(width: 10.0,),
-                          RaisedButton.icon(
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(10.0),
-                              side: BorderSide(color: Colors.black12,),
-                            ),
-                            onPressed: (){
-                              Log(context, "admin","admin");
-                              },
-                            icon: Icon(
-                              Icons.arrow_forward_ios,
-                            ),
-                            color: Colors.white70,
-                            label: Text(
-                              'Login ',
-                              style: TextStyle(
-                                color: Colors.black,
+                          SizedBox(height: 20.0,),
+                          Container(
+                            width: double.infinity,
+                            height: 40,
+                            child: RaisedButton.icon(
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(10.0),
+                                side: BorderSide(color: Colors.black12,),
                               ),
+                              onPressed: (){
+                                Log(context, "admin","admin");
+                                },
+                              icon: Icon(
+                                Icons.arrow_forward_ios,
+                              ),
+                              color: Colors.orangeAccent,
+                              label: Text(
+                                'Login ',
+                                style: TextStyle(
+                                  color: Colors.black,
+                                  fontSize: 20,
+                                ),
+                              ),
+                              splashColor: Colors.red,
                             ),
-                            splashColor: Colors.red,
                           )
                         ],
                       ),

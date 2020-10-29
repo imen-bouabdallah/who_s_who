@@ -5,6 +5,10 @@ import 'package:who_s_who/TopBar.dart';
 import 'Modules/Message.dart';
 import 'Modules/TextComposer.dart';
 
+/// This screen is for the chat, it shows messages from the group and allow to send messages
+/// Text composer is used
+/// If the user decides to go back he'll quit current game
+
 
 class Discussion extends StatefulWidget{
   @override
@@ -32,38 +36,46 @@ class _DiscussionPage extends State<Discussion> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Colors.orange,
-      appBar: TopBar('Discussion', [IconButton(
-        onPressed: (){},
-        icon: Icon(Icons.info),
-        padding: EdgeInsets.only(right: 2.0),
-      )]),
-      body: GestureDetector(
-        onTap: ()=> FocusScope.of(context).unfocus(),
-        child: Column(
-          children:[
-            Expanded(
-            child: Container(
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.only(
-                    topRight: Radius.circular(40.0),
-                    topLeft: Radius.circular(40.0),
+    return WillPopScope(
+      //onWillPop: _onBackPressed,
+      //TODO uncomment when ready to disable back button
+      //onWillPop: ()async => false,
+      child: Scaffold(
+        backgroundColor: Colors.orange,
+        appBar: TopBar('Discussion', [IconButton(
+          onPressed: (){},
+          icon: Icon(Icons.info),
+          padding: EdgeInsets.only(right: 2.0),
+        )]),
+        body: GestureDetector(
+          onTap: ()=> FocusScope.of(context).unfocus(),
+          child: Column(
+            children:[
+              Expanded(
+              child: Container(
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.only(
+                      topRight: Radius.circular(40.0),
+                      topLeft: Radius.circular(40.0),
+                  ),
+                  color: Colors.white,
                 ),
-                color: Colors.white,
-              ),
-              width: double.infinity,
-              child:  ChatMessages(),
+                width: double.infinity,
+                child:  ChatMessages(),
 
-                  ///Child N°2 the chat composor
-              ),
+                    ///Child N°2 the chat composor
+                ),
+            ),
+
+              TextComposer(()=>(){}, (String msg)=>{
+                //TODO retreive and send message to DB
+                print("\n the retreived msg = "+msg),
+              }),
+          ],
           ),
-
-            TextComposer(()=>(){}, sendMsg()),
-        ],
+          ),
         ),
-        ),
-      );
+    );
 
   }
 }
@@ -159,3 +171,27 @@ class Messages extends StatelessWidget {
     );
   }
 }
+
+
+//Dialog window
+/*Future<bool> _onBackPressed() {
+  return showDialog(
+    context: context,
+    builder: (context) => new AlertDialog(
+      title: new Text('Are you sure?'),
+      content: new Text('Do you want to exit an App'),
+      actions: <Widget>[
+        new GestureDetector(
+          onTap: () => Navigator.of(context).pop(false),
+          child: Text("NO"),
+        ),
+        SizedBox(height: 16),
+        new GestureDetector(
+          onTap: () => Navigator.of(context).pop(true),
+          child: Text("YES"),
+        ),
+      ],
+    ),
+  ) ??
+      false;
+}*/
