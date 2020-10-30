@@ -1,7 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:who_s_who/MBackground.dart';
-import 'package:who_s_who/authPage.dart';
+
+import 'file:///D:/Android/AndroidStudioProjects2/who_s_who/lib/Screens/authPage.dart';
 
 void main() {
   runApp(

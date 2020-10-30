@@ -1,8 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:who_s_who/RecoverPass.dart';
-import 'package:who_s_who/WelcomePage.dart';
+import 'package:who_s_who/Screens/RecoverPass.dart';
+import 'package:who_s_who/Screens/WelcomePage.dart';
 
 class LoginPage extends StatefulWidget{
   @override

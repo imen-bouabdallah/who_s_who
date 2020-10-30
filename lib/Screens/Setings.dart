@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:who_s_who/About.dart';
 import 'package:who_s_who/MBackground.dart';
 import 'package:who_s_who/TopBar.dart';
-import 'package:who_s_who/Tutorial.dart';
+
+import 'file:///D:/Android/AndroidStudioProjects2/who_s_who/lib/Screens/About.dart';
+import 'file:///D:/Android/AndroidStudioProjects2/who_s_who/lib/Screens/Tutorial.dart';
 
 import 'authPage.dart';
 

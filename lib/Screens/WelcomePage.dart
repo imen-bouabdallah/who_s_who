@@ -1,9 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:who_s_who/AnswerScreen.dart';
-import 'package:who_s_who/Discussion.dart';
 import 'package:who_s_who/MBackground.dart';
-import 'package:who_s_who/Setings.dart';
+import 'package:who_s_who/Screens/AnswerScreen.dart';
+import 'package:who_s_who/Screens/Discussion.dart';
+import 'package:who_s_who/Screens/Setings.dart';
 import 'package:who_s_who/TopBar.dart';
 
 class WelcomePage extends StatelessWidget{
