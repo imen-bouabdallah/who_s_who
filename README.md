@@ -4,4 +4,4 @@ other participants and have to guess who's answer is whos.
 The player with the highest score wins
 
 
-<img sr="https://github.com/imen-bouabdallah/who_s_who/blob/master/Screenshot_20211202-111103.png" width =180 height = 280 ><img sr="https://github.com/imen-bouabdallah/who_s_who/blob/master/Screenshot_20211202-111120.png" width =180 height = 280 ><img sr="https://github.com/imen-bouabdallah/who_s_who/blob/master/Screenshot_20211202-111128.png" width =180 height = 280 ><img sr="https://github.com/imen-bouabdallah/who_s_who/blob/master/Screenshot_20211202-111212.png" width =180 height = 280 >
+<img sr="https://github.com/imen-bouabdallah/who_s_who/blob/master/Screenshot_20211202-111103.png" width ="180" height = "280" >   <img sr="https://github.com/imen-bouabdallah/who_s_who/blob/master/Screenshot_20211202-111120.png" width ="180" height = "280" >   <img sr="https://github.com/imen-bouabdallah/who_s_who/blob/master/Screenshot_20211202-111128.png" width ="180" height = "280" >  <img sr="https://github.com/imen-bouabdallah/who_s_who/blob/master/Screenshot_20211202-111212.png" width ="180" height = "280" >
